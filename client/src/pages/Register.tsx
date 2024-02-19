@@ -50,8 +50,8 @@ const Register = () => {
     navigate("/login");
   }, []);
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="row border rounded-5 p-3 bg-modal shadow box-area g-5">
+    <div className="container d-flex justify-content-center align-items-center p-3">
+            <div className="row border rounded-5 p-3 bg-modal shadow  ">
         <form onSubmit={formik.handleSubmit}>
           <div className="mb-4 d-flex justify-content-center align-items-center ">
             <div>
