@@ -39,7 +39,10 @@ const Login = () => {
     onSubmit: async (values) => {
       const { user_name, mot_de_passe } = values;
       try {
-        const response = await axios.post("http://localhost:5000/auth/signin");
+        const response = await axios.post("http://localhost:5000/auth/signin", {
+          user_name,
+          mot_de_passe,
+        });
         console.log("===>", response);
         console.log("i===>", response.data.id);
 

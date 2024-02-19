@@ -33,7 +33,11 @@ const Register = () => {
       const { user_name, mot_de_passe, profil } = values;
 
       try {
-        const response = await axios.post("http://localhost:5000/auth/signup");
+        const response = await axios.post("http://localhost:5000/auth/signup", {
+          user_name,
+          mot_de_passe,
+          profil,
+        });
         console.log("===>", response);
         navigate("/login");
       } catch (error) {

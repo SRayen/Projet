@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import axios from "axios";
+import ProtectedRoutes from "./ProtectedRoutes";
+import Profil from "./pages/Profil";
 
 /* withCredentials:true :==> to allow this request to get credentials from that API Endpoint.
  Exp: (when we register a user==>getting back a cookie from backend url) ==>it will be saved in the 
@@ -18,7 +20,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />/
+          <Route path="/register" element={<Register />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/profil" element={<Profil />} />
+          </Route>
         </Routes>
         <Footer />
       </Router>
