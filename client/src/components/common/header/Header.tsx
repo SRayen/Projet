@@ -1,24 +1,60 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./header.css";
+import DarkMode from "../../DarkMode/DarkMode";
+import { useThemeStore } from "../../../stores/themeStore";
+import Button from "../../Button";
 
 export default function Header() {
+  const { isDarkMode } = useThemeStore();
   return (
-    <nav className="header">
-      <img src="./roundesk-logo.png" alt="logo" className="img" />
-      <ul className="list">
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
+    // <nav className="header">
+    //   <img src="./roundesk-logo.png" alt="logo" className="img" />
+    //   <ul className="list">
+    //     <li>
+    //       <Link to="/register">Register</Link>
+    //     </li>
 
-        <li>
+    //     <li>
+    //       <Link to="/login">Login</Link>
+    //     </li>
+
+    //     <li>
+    //       <Link to="/">Home</Link>
+    //     </li>
+    //   </ul>
+    // </nav>
+
+    <Navbar
+      bg={`${isDarkMode ? "dark" : "light"}`}
+      variant={"light"}
+      expand="lg"
+      className="justify-content-between"
+    >
+      <Container className="justify-content-between">
+        <div>
+          <img src="./roundesk-logo.png" className="logo-img" />
+        </div>
+        <div className="d-flex">
+          <DarkMode />
           <Link to="/login">Login</Link>
-        </li>
+          <Link to="/register">Register</Link>
+          <Button
+            label="hello"
+            onClick={() => {
+              console.log("test");
+            }}
+          />
 
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-      </ul>
-    </nav>
+          <Button
+            label="hello"
+            outline={true}
+            onClick={() => {
+              console.log("test");
+            }}
+          />
+        </div>
+      </Container>
+    </Navbar>
   );
 }
