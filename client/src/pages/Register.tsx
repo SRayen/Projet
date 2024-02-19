@@ -33,20 +33,12 @@ const Register = () => {
       const { user_name, mot_de_passe, profil } = values;
 
       try {
-        const response = await axios.post(
-          "http://localhost:5000/auth/signup",
-          { user_name, mot_de_passe, profil },
-          //withCredentials:true :==> to allow this request to get credentials from that API Endpoint.
-          { withCredentials: true }
-        );
+        const response = await axios.post("http://localhost:5000/auth/signup");
         console.log("===>", response);
         navigate("/login");
       } catch (error) {
-        //   throw new Error(`Error making POST request: ${error}`);
         console.log(error);
       }
-      //   console.log(values);
-      //   formik.resetForm();
     },
   });
 

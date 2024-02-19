@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -39,12 +39,7 @@ const Login = () => {
     onSubmit: async (values) => {
       const { user_name, mot_de_passe } = values;
       try {
-        const response = await axios.post(
-          "http://localhost:5000/auth/signin",
-          { user_name, mot_de_passe }
-          //withCredentials:true :==> to allow this request to get credentials from that API Endpoint.
-          // { withCredentials: true }
-        );
+        const response = await axios.post("http://localhost:5000/auth/signin");
         console.log("===>", response);
         console.log("i===>", response.data.id);
 
@@ -144,7 +139,6 @@ const Login = () => {
           Welcome {user.user_name} , your profile is : {user.profil}
         </h1>
       )}
-      {/* <button onClick={() => getProfil()}>Test Profil</button> */}
     </>
   );
 };
