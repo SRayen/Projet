@@ -1,13 +1,29 @@
 /* header.css */
 .header {
   background-color: #16a03d;
-  color: #fff;
   font-size: 18px;
   padding: 20px;
   height: 50px;
+  display: flex;
+
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
 }
 .nav {
-  background-color: red;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -26,7 +42,7 @@
   }
 
   .img {
-    width: 70%;
+    width: 15%;
   }
 }
 
@@ -43,7 +59,7 @@
   }
 
   .img {
-    width: 70%;
+    width: 20%;
   }
 }
 
@@ -60,6 +76,6 @@
   }
 
   .img {
-    width: 30%;
+    width: 35%;
   }
 }
