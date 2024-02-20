@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import axios from "axios";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Profil from "./pages/Profil";
+import Home from "./pages/Home";
 
 /* withCredentials:true :==> to allow this request to get credentials from that API Endpoint.
  Exp: (when we register a user==>getting back a cookie from backend url) ==>it will be saved in the 
@@ -19,6 +20,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route element={<ProtectedRoutes />}>
