@@ -1,5 +1,3 @@
-import React from "react";
-
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,7 +5,6 @@ import Col from "react-bootstrap/Col";
 
 import { Link } from "react-router-dom";
 
-import { FaSquareFacebook } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import useThemeStore from "../../../stores/themeStore";
@@ -19,68 +16,30 @@ export default function Footer() {
     <>
       <Navbar
         bg={`${isDarkMode ? "dark" : "light"}`}
-        variant={"light"}
+        variant="light"
         expand="lg"
+        className="fixed-bottom bg-light"
       >
-        <Container className="d-flex align-items-center justify-content-between">
-          <Row>
-            <Col
-              className="d-flex flex-column align-items-center justify-content-center ft-1 m-4"
-              xs={12}
-              md={4}
-            >
-              <h3>
-                <span className="title-span">round</span>desk
-              </h3>
-              <div className=" px-3">
-                <span>
-                  Roundesk Technologies is a new start-up that targets SMEs,
-                  ETIs and Large Enterprises through an omnichannel and
-                  cross-channel Customer Relationship Management tool.
-                </span>
-              </div>
+        <Container className=" py-1">
+          <Row className="w-100">
+            <Col className="text-center mb-lg-0" md={6} sm={12}>
+              Selmen Rayen &copy; 2024. All rights reserved.
             </Col>
-            <Col
-              className="d-flex flex-column align-items-center justify-content-center ft-1 m-4"
-              xs={12}
-              md={3}
-            >
-              <div className="footer-icons">
-                <Link to="/about">
-                  <FaSquareFacebook className="react-icon-class" />
-                </Link>
-                <Link to="/about">
-                  <FaGithub className="react-icon-class" />
-                </Link>
-                <Link to="/about">
-                  <FaLinkedin className="react-icon-class" />
-                </Link>
-              </div>
-            </Col>
-
-            <Col
-              className="d-flex align-items-center justify-content-center  m-4"
-              xs={12}
-              md={3}
-            >
-              <div className="d-flex flex-column align-items-center justify-content-center ft-1">
-                <h5>Contact</h5>
-                <ul>
-                  <li className="nav-item">
-                    <i className="fa-solid fa-phone-volume"></i> +216 95730757
-                  </li>
-                  <li className="nav-item">
-                    <i className="fa-solid fa-envelope"></i>
-                    selmen.rayen.92@gmail.com
-                  </li>
-                  <li className="nav-item">
-                    <p>
-                      <i className="fa-solid fa-paper-plane"></i> Selmen rayen,
-                      Tunisia.
-                    </p>
-                  </li>
-                </ul>
-              </div>
+            <Col className="text-center text-lg-end" md={6} sm={12}>
+              <Link
+                to="https://github.com/SRayen"
+                target="_blank"
+                className="me-3"
+              >
+                <FaGithub size={24} style={{ color: "#2be135" }} />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/in/rayen-selmen/"
+                target="_blank"
+                className="me-3"
+              >
+                <FaLinkedin size={24} style={{ color: "#2be135" }} />
+              </Link>
             </Col>
           </Row>
         </Container>

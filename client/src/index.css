@@ -1,141 +1,29 @@
-/** @format */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 :root {
-	--primary-color: #2be135;
-	--text-color: #0c130c;
-	--body-background: #ececec;
-	--body-color: #0c130c;
-	--modal-color: white;
+  --primary-color: #2be135;
+  --text-color: #0c130c;
+  --body-background: #ececec;
+  --body-color: #0c130c;
+  --modal-color: white;
+  --toggle-color: #f1f6f1;
 }
 [data-theme="dark"] {
-	--primary-color: #2be135;
-	--text-color: #f1f6f1;
-	--body-background: #2c2f31;
-	--body-color: #f1f6f1;
-	--modal-color: #212529;
+  --primary-color: #2be135;
+  --text-color: #f1f6f1;
+  --body-background: #2c2f31;
+  --body-color: #f1f6f1;
+  --modal-color: #212529;
+  --toggle-color: #2be135;
 }
-
 
 body {
-	font-family: "Poppins", sans-serif;
-	background-color: var(--body-background) !important;
-	color:var(--body-color) !important;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--body-background) !important;
+  color: var(--body-color) !important;
 }
 
-.bg-modal{
-	background-color: var(--modal-color);
-}
-/*------------ Login container ------------*/
-
-.box-area {
-	width: 430px;
-}
-
-.bg-green {
-	background-color: var(--primary-color);
-}
-
-/*------------ Right box ------------*/
-
-.right-box {
-	padding: 40px 30px 40px 40px;
-}
-
-/*------------ Custom Placeholder ------------*/
-
-::placeholder {
-	font-size: 16px;
-}
-
-.rounded-4 {
-	border-radius: 20px;
-}
-.rounded-5 {
-	border-radius: 30px;
-}
-
-.pointer-on-hover {
-	cursor: pointer;
-	color: rgb(2, 157, 2);
-}
-
-.div-on-hover {
-	opacity: 1; /* Default opacity */
-	transition: opacity 0.2s ease-in-out;
-}
-
-.div-on-hover:hover {
-	opacity: 0.5; /* Opacity on hover */
-}
-.button-style {
-	color: green; /* Opacity on hover */
-}
 .logo-img {
-	max-width: 150px; /* Adjust as needed */
-	height: auto; /* Preserve aspect ratio */
-}
-
-.react-icon-class {
-	color: var(--primary-color);
-	font-size: 40px;
-}
-
-.class-button {
-	position: relative;
-	opacity: 0.7;
-	padding: 5px;
-	cursor: not-allowed;
-	border-radius: 0.4rem;
-	opacity: 0.8;
-	transition: opacity 0.2s ease-in-out;
-	width: 100%;
-	border: none;
-}
-.background-green {
-	background-color: var(--primary-color);
-}
-.background-white {
-	background-color: var(--light-color);
-}
-.background-white {
-	background-color: var(--light-color);
-}
-.border-black {
-	border: var(--light-color);
-}
-.text-black {
-	color: var(--text-color);
-}
-.text-white {
-	color: var(--light-color);
-}
-
-/*------------ For small screens------------*/
-
-@media only screen and (max-width: 768px) {
-	.box-area {
-		margin: 0 10px;
-	}
-	.left-box {
-		height: 100px;
-		overflow: hidden;
-	}
-	.right-box {
-		padding: 20px;
-	}
-	.logo-img {
-		max-width: 80px;
-	}
-	.react-icon-class {
-		font-size: 20px;
-		margin: 10px;
-	}
-}
-
-@media (max-width: 480px) {
-	.logo-img {
-		max-width: 60px;
-	}
+  max-width: 150px; /* Adjust as needed */
+  height: auto; /* Preserve aspect ratio */
 }

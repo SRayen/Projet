@@ -24,7 +24,6 @@ const DarkMode = () => {
     }
   };
 
-  console.log(isDarkMode);
   return (
     <div className="dark_mode">
       <input
