@@ -1,6 +1,6 @@
+import "./header.css";
 import { Navbar, Container, Nav, Form, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./header.css";
 import DarkMode from "../../DarkMode/DarkMode";
 import { useThemeStore } from "../../../stores/themeStore";
 import { userStatusStore } from "../../../stores/userStatusStore";
@@ -46,7 +46,7 @@ export default function Header() {
           <Form className="d-flex">
             <Nav
               style={{
-                maxHeight: "100px",
+                // maxHeight: "100px",
                 display: "flex",
                 alignItems: "center",
               }}
@@ -54,7 +54,15 @@ export default function Header() {
               navbarScroll
             >
               {status ? (
-                <Nav.Link className="navLink" onClick={() => logOut()}>
+                <Nav.Link
+                  className="navLink"
+                  style={{
+                    color: isDarkMode
+                      ? "var(--primary-color-dark)"
+                      : "var(--primary-color-light)",
+                  }}
+                  onClick={() => logOut()}
+                >
                   Se déconnecter
                 </Nav.Link>
               ) : (
