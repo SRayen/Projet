@@ -34,8 +34,6 @@ const Login = () => {
           mot_de_passe,
         });
         toast.success(response.data.message);
-        console.log("===>", response);
-        console.log("i===>", response.data.id);
 
         saveUserStatus(true);
 
@@ -43,7 +41,7 @@ const Login = () => {
 
         return response.data;
       } catch (error: any) {
-        toast.error(error.message);
+        toast.error(error.response.data.message);
       }
     },
   });
