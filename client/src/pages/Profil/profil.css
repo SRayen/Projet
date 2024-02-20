@@ -1,0 +1,59 @@
+.home {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
+}
+
+.key {
+  color: rgb(21, 92, 0);
+}
+
+.navigate:hover {
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@media (max-width: 576px) {
+  /* Small devices (portrait phones) */
+  .form {
+    width: 100%;
+    margin: auto 10px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Medium devices (landscape phones) */
+  .form {
+    width: 100%;
+    margin: auto 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Large devices (tablets) */
+  .form {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 993px) {
+  /* Extra large devices (desktops) */
+  .form {
+    max-width: 80%;
+  }
+}
