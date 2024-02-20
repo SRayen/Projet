@@ -1,5 +1,15 @@
 version: '3.8'
 services:
+
+  react:
+    container_name: react
+    restart: always
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
   nest-api:
     container_name: nest-api
     restart: always
