@@ -51,4 +51,4 @@ services:
 
 volumes:
   mysql_data:
-  mysql_shadow_data:
+  # mysql_shadow_data:
