@@ -9,7 +9,7 @@ import Register from "./pages/register/Register";
 import axios from "axios";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Profil from "./pages/Profil";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import { Toaster } from "react-hot-toast";
 
 /* withCredentials:true :==> to allow this request to get credentials from that API Endpoint.
