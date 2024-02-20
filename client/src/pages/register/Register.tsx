@@ -8,6 +8,7 @@ import axios from "axios";
 import { FaUser } from "react-icons/fa";
 import { FaUserTie } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
+import toast from "react-hot-toast";
 const Register = () => {
   const navigate = useNavigate();
 
@@ -40,10 +41,11 @@ const Register = () => {
           mot_de_passe,
           profil,
         });
-        console.log("===>", response);
+
+        toast.success(response.data.message);
         navigate("/login");
-      } catch (error) {
-        console.log(error);
+      } catch (error: any) {
+        toast.error(error.message);
       }
     },
   });
