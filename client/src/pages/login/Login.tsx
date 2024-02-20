@@ -9,18 +9,9 @@ import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import userStatusService from "../../stores/userStatusStore";
 import { userStatusStore } from "../../stores/userStatusStore";
-
-interface User {
-  user_name: string;
-  profil: string;
-}
-
+import toast from "react-hot-toast";
 const Login = () => {
-  const [user, setUser] = useState<User>({ user_name: "", profil: "" });
-  const [ok, setOk] = useState(false);
   const { saveUserStatus } = userStatusService();
-  // const { status } = userStatusStore();
-
   const navigate = useNavigate();
 
   //Formik
@@ -42,17 +33,17 @@ const Login = () => {
           user_name,
           mot_de_passe,
         });
+        toast.success(response.data.message);
         console.log("===>", response);
         console.log("i===>", response.data.id);
 
         saveUserStatus(true);
 
-        setOk(true);
         navigate("/profil");
 
         return response.data;
-      } catch (error) {
-        console.log(error);
+      } catch (error: any) {
+        toast.error(error.message);
       }
     },
   });
