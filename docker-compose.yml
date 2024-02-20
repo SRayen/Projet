@@ -37,6 +37,7 @@ services:
       - mysql_data:/var/lib/mysql
 
 # mysql-shadow provides a separate instance of the MySQL database for safe testing and validation of database migrations before applying them to the main production database.
+
   # mysql-shadow:
   #   image: mysql
   #   container_name: mysql-shadow
@@ -50,4 +51,4 @@ services:
 
 volumes:
   mysql_data:
-  mysql_shadow_data:
+  # mysql_shadow_data:
