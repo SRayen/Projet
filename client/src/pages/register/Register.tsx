@@ -21,15 +21,18 @@ const Register = () => {
       profil: "",
     },
     validationSchema: Yup.object({
-      user_name: Yup.string().required("Required field"),
+      user_name: Yup.string().required("Nom d'utilisateur obligatoire"),
       mot_de_passe: Yup.string()
         .min(6, "Mot de passe doit contenir au moins 6 caractères")
         .required("Mot de passe obligatoire"),
       confirm_password: Yup.string()
         .label("confirm password")
         .required("Confirmation mot de passe obligatoire")
-        .oneOf([Yup.ref("mot_de_passe")], "Passwords must match"),
-      profil: Yup.string().required("Profil is required"),
+        .oneOf(
+          [Yup.ref("mot_de_passe")],
+          "Les mots de passe doivent correspondre"
+        ),
+      profil: Yup.string().required("Profil "),
     }),
 
     onSubmit: async (values) => {
@@ -45,7 +48,11 @@ const Register = () => {
         toast.success(response.data.message);
         navigate("/login");
       } catch (error: any) {
-        toast.error(error.response.data.message);
+        if (error?.response?.data?.message) {
+          toast.error(error.response.data.message);
+        } else {
+          toast.error(error.message);
+        }
       }
     },
   });
@@ -91,7 +98,7 @@ const Register = () => {
               onBlur={formik.handleBlur}
               value={formik.values.profil}
             >
-              <option selected>Profile...</option>
+              <option selected>Profil...</option>
               <option value="admin">Admin</option>
               <option value="user">User</option>
               <option value="superviseur">Superviseur</option>
@@ -146,7 +153,7 @@ const Register = () => {
           style={{ backgroundColor: "#2be135" }}
           className="btn "
         >
-          Submit
+          S'inscrire
         </button>
 
         <div

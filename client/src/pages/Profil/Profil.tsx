@@ -18,7 +18,7 @@ export default function Profil() {
         const response = await axios.get("http://localhost:5000/auth/user");
         console.log("===>", response.data);
         setuser(response.data);
-        toast.success(response.data.message);
+        // toast.success(response.data.message);
       } catch (error) {
         navigate("/login");
       }

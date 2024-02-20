@@ -19,14 +19,6 @@
   -o-border-radius: 2%;
 }
 
-.profil {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
 .navigate {
   font-size: 18px;
   cursor: pointer;

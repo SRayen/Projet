@@ -40,7 +40,11 @@ const Login = () => {
 
         return response.data;
       } catch (error: any) {
-        toast.error(error.response.data.message);
+        if (error?.response?.data?.message) {
+          toast.error(error.response.data.message);
+        } else {
+          toast.error(error.message);
+        }
       }
     },
   });
@@ -102,7 +106,7 @@ const Login = () => {
           style={{ backgroundColor: "#2be135" }}
           className="btn "
         >
-          Submit
+          Se connecter
         </button>
 
         <div

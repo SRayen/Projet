@@ -1,62 +1,8 @@
-/* header.css */
-.header {
-  background-color: #b5e3c2;
-  font-size: 27px;
-  display: flex;
-  height: 70px;
-  align-items: center;
-  justify-content: center;
-}
-
-.list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-}
-
 .navLink:hover {
   background-color: #2be135;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-
-/* Large devices (desktops) */
-@media (min-width: 992px) {
-  .navbar-brand {
-    font-size: 24px;
-  }
-
-  .nav-link {
-    font-size: 25px;
-  }
-
-  .img {
-    width: 10%;
-  }
-}
-
-/* Medium devices (tablets) */
-@media (min-width: 577px) and (max-width: 991px) {
-  .navbar-brand {
-    font-size: 22px;
-  }
-
-  .img {
-    width: 20%;
-  }
-}
-
-/* Small devices (landscape phones) */
-@media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 20px;
-  }
-
-  .img {
-    width: 35%;
-  }
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
