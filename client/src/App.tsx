@@ -8,7 +8,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import axios from "axios";
 import ProtectedRoutes from "./ProtectedRoutes";
-import Profil from "./pages/Profil";
+import Profil from "./pages/Profil/Profil";
 import Home from "./pages/Home/Home";
 import { Toaster } from "react-hot-toast";
 
