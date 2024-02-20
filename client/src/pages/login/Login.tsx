@@ -1,6 +1,6 @@
 /** @format */
 import "./login.css";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -8,7 +8,6 @@ import axios from "axios";
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import userStatusService from "../../stores/userStatusStore";
-import { userStatusStore } from "../../stores/userStatusStore";
 import toast from "react-hot-toast";
 const Login = () => {
   const { saveUserStatus } = userStatusService();
@@ -34,8 +33,6 @@ const Login = () => {
           mot_de_passe,
         });
         toast.success(response.data.message);
-        console.log("===>", response);
-        console.log("i===>", response.data.id);
 
         saveUserStatus(true);
 
@@ -43,7 +40,7 @@ const Login = () => {
 
         return response.data;
       } catch (error: any) {
-        toast.error(error.message);
+        toast.error(error.response.data.message);
       }
     },
   });

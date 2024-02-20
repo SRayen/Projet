@@ -10,7 +10,7 @@ services:
       - 5000:5000
     depends_on:
       - mysql
-      - mysql-shadow
+      # - mysql-shadow
     env_file:
       - server/.env
 
@@ -27,16 +27,16 @@ services:
       - mysql_data:/var/lib/mysql
 
 # mysql-shadow provides a separate instance of the MySQL database for safe testing and validation of database migrations before applying them to the main production database.
-  mysql-shadow:
-    image: mysql
-    container_name: mysql-shadow
-    restart: always
-    ports:
-      - "3308:3306"  # Use a different port to avoid conflict with main database
-    env_file:
-      - server/.env
-    volumes:
-      - mysql_shadow_data:/var/lib/mysql
+  # mysql-shadow:
+  #   image: mysql
+  #   container_name: mysql-shadow
+  #   restart: always
+  #   ports:
+  #     - "3308:3306"  # Use a different port to avoid conflict with main database
+  #   env_file:
+  #     - server/.env
+  #   volumes:
+  #     - mysql_shadow_data:/var/lib/mysql
 
 volumes:
   mysql_data:
