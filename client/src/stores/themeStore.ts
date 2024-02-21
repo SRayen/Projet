@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
+//Zustand: librairie de state management (comme Redux)
 export interface ThemeState {
   isDarkMode: boolean;
 }
