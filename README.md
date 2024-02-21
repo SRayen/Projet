@@ -59,16 +59,16 @@
 * ➡️ Démarrer l'ensemble de l'application en une seule commande.
   
  👉 Etapes:
-  #### 1.Clonez le dépôt :
+  #### 1.Cloner le dépôt :
   ```
 git clone https://github.com/SRayen/Test-Technique.git
 ```
 
-  #### 2.Accédez au répertoire du projet :
+  #### 2.Accéder au répertoire du projet :
   ```
 cd Test-Technique
 ```
-  #### 3.Exécuter docker compose :
+  #### 3.Démarrer le projet par la commande:
   ```
 docker-compose up -d
 ```
