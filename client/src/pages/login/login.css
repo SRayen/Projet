@@ -1,11 +1,4 @@
-.home {
-  height: 80%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .form {
   width: 60%;
   text-align: center;

@@ -51,7 +51,7 @@ const Login = () => {
 
   const Toggle = useCallback(() => {
     navigate("/register");
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="register">

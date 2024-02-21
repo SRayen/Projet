@@ -1,4 +1,4 @@
-.home {
+.user_profil {
   height: 80%;
   width: 100%;
   position: absolute;
@@ -17,10 +17,6 @@
   -moz-border-radius: 2%;
   -ms-border-radius: 2%;
   -o-border-radius: 2%;
-}
-
-.key {
-  color: red
 }
 
 .navigate:hover {
