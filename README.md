@@ -55,6 +55,7 @@
 **Dans ce projet, l'utilisation de Docker Compose va nous permettre de** :
 * ➡️ Définir l'ensemble de l'application (frontend React, backend NestJS et base de données MySQL) dans un seul fichier docker-compose.yml.
 * ➡️ Exécutee le projet de manière identique sur n'importe quelle machine, quelle que soit la configuration logicielle (Portabilité).
+* ➡️ Exploiter l'image officielle MySQL fournie par Docker Hub.
 * ➡️ Démarrer l'ensemble de l'application en une seule commande.
   
  👉 Etapes:
