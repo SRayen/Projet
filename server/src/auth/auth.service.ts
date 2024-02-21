@@ -90,12 +90,12 @@ export class AuthService {
 
       const user = await this.prisma.user.findUnique({
         where: { id: data.id },
-        select: { user_name: true, profil: true }, //return only user_name, password
+        select: { user_name: true, profil: true }, //return only user_name, profil
       });
 
       return user;
     } catch (error) {
-      throw new BadRequestException('An unexpected error occurred !');
+      throw new BadRequestException('une erreur inattendue est apparue !');
     }
   }
 
