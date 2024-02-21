@@ -54,7 +54,7 @@
 
 **Dans ce projet, l'utilisation de Docker Compose va nous permettre de** :
 * ➡️ Définir l'ensemble de l'application (frontend React, backend NestJS et base de données MySQL) dans un seul fichier docker-compose.yml.
-* ➡️ Exécutee le projet de manière identique sur n'importe quelle machine, quelle que soit la configuration logicielle (Portabilité).
+* ➡️ Exécutee le projet de manière identique sur n'importe quelle environnement, quelle que soit la configuration logicielle (Portabilité).
 * ➡️ Exploiter l'image officielle MySQL fournie par Docker Hub.
 * ➡️ Démarrer l'ensemble de l'application en une seule commande.
   
@@ -70,7 +70,7 @@ cd Test-Technique
 ```
   #### 3.Démarrer le projet par la commande:
   ```
-docker-compose up -d
+docker-compose up
 ```
 ##  Remarque  🔴 <a name="remarque"></a>
 Le fichier **.env** n'est pas inclus dans le **.gitignore** intentionnellement afin de vous montrer les **variables d'environnement** nécessaires pour le projet. De plus, veuillez noter que le service "mysql-shadow" est commenté dans le fichier docker-compose de manière intentionnelle pour vous montrer qu'il était utilisé lors de la migration de la base de données.
