@@ -1,4 +1,4 @@
-.register {
+.home {
   height: 80%;
   width: 100%;
   position: absolute;
@@ -17,9 +17,6 @@
   -moz-border-radius: 2%;
   -ms-border-radius: 2%;
   -o-border-radius: 2%;
-}
-.bienvenue {
-  margin-bottom: 25px;
 }
 h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

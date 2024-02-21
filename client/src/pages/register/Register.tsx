@@ -59,7 +59,7 @@ const Register = () => {
 
   const Toggle = useCallback(() => {
     navigate("/login");
-  }, []);
+  }, [navigate]);
   return (
     <div className="register">
       <form className="form" onSubmit={formik.handleSubmit}>

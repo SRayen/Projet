@@ -1,14 +1,11 @@
 import "./profil.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import userStatusService from "../../stores/userStatusStore";
 import { useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 export default function Profil() {
   const { width, height } = useWindowSize();
-  const { saveUserStatus } = userStatusService();
   const [user, setuser] = useState({ user_name: "", profil: "" });
   const navigate = useNavigate();
 
@@ -16,9 +13,7 @@ export default function Profil() {
     const fetch = async () => {
       try {
         const response = await axios.get("http://localhost:5000/auth/user");
-        console.log("===>", response.data);
         setuser(response.data);
-        // toast.success(response.data.message);
       } catch (error) {
         navigate("/login");
       }
@@ -27,7 +22,7 @@ export default function Profil() {
   }, [navigate]);
 
   return (
-    <div className="home">
+    <div className="user_profil">
       <Confetti width={width} height={height} />
       <div className="desc">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -40,11 +35,12 @@ export default function Profil() {
         <div className="bienvenue">
           <h1>Bienvenue</h1>
           <h2>
-            <span className="key">Nom d'utilisateur: </span>
+            <span style={{ color: "red" }}>Nom d'utilisateur:</span>
             {user.user_name}
           </h2>
           <h2>
-            <span className="key">Profil: </span> {user.profil}
+            <span style={{ color: "red" }}>Profil:</span>
+            {user.profil}
           </h2>
         </div>
       </div>
