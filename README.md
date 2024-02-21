@@ -33,11 +33,12 @@
   </tr>
   </table>
 
-  ### 📑 Table of Contents
+  ### 📑 Table des matières
 - [📘 Description](#description)
+- [🎬 Vidéo demo](#demo)
 - [🧩 Exécution](#excution)
 - [🚀 Remarque](#remarque)
-- [🎬 Captures d'écran](#captures)
+- [📷 Captures d'écran](#captures)
   
 ## 📘 Description <a name="description"></a>
  **Ce projet web complet propose** :
@@ -46,7 +47,9 @@
 * ➡️ API RESTful pour l'enregistrement des utilisateurs et l'authentification.
 * ➡️ Interface d'authentification responsive avec gestion des erreurs.
 * ➡️ Page protégée affichant le nom d'utilisateur et le profil.
-* 
+
+## Vidéo demo 🎬 <a name="demo"></a>
+👉 https://drive.google.com/file/d/1fq7uEVQ_DK-VdyAAF6uvqY1a7WHik9Jh/view?usp=drive_link
 ## Exécution 🧩 <a name="excution"></a>
 
 **Dans ce projet, l'utilisation de Docker Compose va nous permettre de** :
